@@ -1,0 +1,102 @@
+[
+  {
+    "id": "slot-001",
+    "venueId": "ace-sports-dlf",
+    "courtNumber": 1,
+    "date": "2025-01-18",
+    "startTime": "06:00",
+    "endTime": "07:00",
+    "status": "available",
+    "price": 800
+  },
+  {
+    "id": "slot-002",
+    "venueId": "ace-sports-dlf",
+    "courtNumber": 1,
+    "date": "2025-01-18",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "status": "booked",
+    "price": 800
+  },
+  {
+    "id": "slot-003",
+    "venueId": "ace-sports-dlf",
+    "courtNumber": 1,
+    "date": "2025-01-18",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "available",
+    "price": 800
+  },
+  {
+    "id": "slot-004",
+    "venueId": "ace-sports-dlf",
+    "courtNumber": 2,
+    "date": "2025-01-18",
+    "startTime": "06:00",
+    "endTime": "07:00",
+    "status": "available",
+    "price": 800
+  },
+  {
+    "id": "slot-005",
+    "venueId": "metro-courts-cp",
+    "courtNumber": 1,
+    "date": "2025-01-18",
+    "startTime": "06:00",
+    "endTime": "07:00",
+    "status": "available",
+    "price": 600
+  },
+  {
+    "id": "slot-006",
+    "venueId": "metro-courts-cp",
+    "courtNumber": 1,
+    "date": "2025-01-18",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "status": "available",
+    "price": 600
+  },
+  {
+    "id": "slot-007",
+    "venueId": "sports-village-noida",
+    "courtNumber": 1,
+    "date": "2025-01-18",
+    "startTime": "06:00",
+    "endTime": "07:00",
+    "status": "available",
+    "price": 700
+  },
+  {
+    "id": "slot-008",
+    "venueId": "sports-village-noida",
+    "courtNumber": 1,
+    "date": "2025-01-18",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "status": "held",
+    "price": 700
+  },
+  {
+    "id": "slot-009",
+    "venueId": "sports-village-noida",
+    "courtNumber": 2,
+    "date": "2025-01-18",
+    "startTime": "06:00",
+    "endTime": "07:00",
+    "status": "available",
+    "price": 700
+  },
+  {
+    "id": "slot-010",
+    "venueId": "green-valley-faridabad",
+    "courtNumber": 1,
+    "date": "2025-01-18",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "status": "available",
+    "price": 500
+  }
+]

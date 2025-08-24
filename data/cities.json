@@ -1,0 +1,37 @@
+[
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "nameHi": "दिल्ली",
+    "state": "Delhi",
+    "region": "NCR"
+  },
+  {
+    "id": "gurgaon",
+    "name": "Gurgaon",
+    "nameHi": "गुरुग्राम",
+    "state": "Haryana",
+    "region": "NCR"
+  },
+  {
+    "id": "noida",
+    "name": "Noida",
+    "nameHi": "नोएडा",
+    "state": "Uttar Pradesh",
+    "region": "NCR"
+  },
+  {
+    "id": "faridabad",
+    "name": "Faridabad",
+    "nameHi": "फरीदाबाद",
+    "state": "Haryana",
+    "region": "NCR"
+  },
+  {
+    "id": "ghaziabad",
+    "name": "Ghaziabad",
+    "nameHi": "गाजियाबाद",
+    "state": "Uttar Pradesh",
+    "region": "NCR"
+  }
+]
