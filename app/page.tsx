@@ -4,11 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Navigation } from '@/components/ui/Navigation';
 import { Button } from '@/components/ui/Button';
-import Hero from '@/components/marketing/Hero';
-import FixtureTool from '@/components/marketing/FixtureTool';
-import Footer from '@/components/Footer';
 import { useI18n } from '@/lib/i18n';
 
 export default function HomePage() {
@@ -19,22 +15,75 @@ export default function HomePage() {
       {/* a11y: skip link */}
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 bg-black text-white px-3 py-2 rounded z-50"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 bg-black text-white px-3 py-2 rounded"
       >
         {t('a11y.skip.content') ?? 'Skip to content'}
       </a>
 
-      <Navigation />
-
       <main id="main">
-        {/* Hero Section */}
-        <Hero />
+        {/* ===== HERO ===== */}
+        <section className="relative overflow-hidden px-4 py-16 md:py-24">
+          {/* background gradients */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -z-20"
+            style={{
+              background:
+                'radial-gradient(1200px 600px at 80% -10%, rgba(200,255,90,0.25), transparent 60%), radial-gradient(1000px 500px at -10% 110%, rgba(11,27,43,0.9), #0B1B2B)',
+            }}
+          />
+          {/* readability overlay */}
+          <div className="absolute inset-0 -z-10 bg-black/45" aria-hidden="true" />
 
-        {/* Anchor for Book a Court CTA */}
-        <div id="book-court" className="sr-only">Book a Court Section</div>
+          <div className="relative z-10 mx-auto max-w-4xl text-center text-white">
+            <motion.h1
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-4 text-4xl font-extrabold tracking-tight md:text-6xl"
+            >
+              {t('home.title') ?? 'PickleBay'}
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="mx-auto mb-8 max-w-2xl text-lg md:text-xl/relaxed text-white/85"
+            >
+              {t('home.subtitle') ??
+                'Zero-drama pickleball: book instantly, compete transparently, belong.'}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="flex items-center justify-center gap-3"
+            >
+              <Button asChild variant="primary" size="lg" className="shadow">
+                <Link href="/venues" aria-label="Find a court">
+                  {t('cta.find.court') ?? 'Find a court'}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+
+              <Button
+                asChild
+                variant="secondary"
+                size="lg"
+                className="bg-white/15 hover:bg-white/25 text-white border border-white/30"
+              >
+                <Link href="/tournaments" aria-label="Find a tournament">
+                  {t('cta.find.tournament') ?? 'Find a tournament'}
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
+        </section>
 
         {/* ===== FEATURE TILES ===== */}
-        <section className="px-4 py-16 bg-white">
+        <section className="px-4 py-10">
           <div className="mx-auto max-w-6xl">
             <h2 className="text-center text-2xl font-bold text-foreground md:text-3xl">
               {t('home.everything') ?? 'Everything you need for pickleball'}
@@ -45,13 +94,7 @@ export default function HomePage() {
             </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="card p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
-              >
+              <div className="card p-6">
                 <h3 className="text-lg font-semibold mb-2">
                   {t('home.venues') ?? 'Explore Venues'}
                 </h3>
@@ -61,15 +104,9 @@ export default function HomePage() {
                 <Button asChild variant="outline">
                   <Link href="/venues">Explore</Link>
                 </Button>
-              </motion.div>
+              </div>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="card p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
-              >
+              <div className="card p-6">
                 <h3 className="text-lg font-semibold mb-2">
                   {t('home.tournaments') ?? 'Join Tournaments'}
                 </h3>
@@ -79,15 +116,9 @@ export default function HomePage() {
                 <Button asChild variant="outline">
                   <Link href="/tournaments">Explore</Link>
                 </Button>
-              </motion.div>
+              </div>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="card p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
-              >
+              <div className="card p-6">
                 <h3 className="text-lg font-semibold mb-2">
                   {t('home.catalog') ?? 'Shop Gear'}
                 </h3>
@@ -97,19 +128,11 @@ export default function HomePage() {
                 <Button asChild variant="outline">
                   <Link href="/catalog">Explore</Link>
                 </Button>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
-
-        {/* Anchor for Tournaments CTA */}
-        <div id="tournaments" className="sr-only">Tournaments Section</div>
-
-        {/* Fixture Tool Section */}
-        <FixtureTool />
       </main>
-
-      <Footer />
     </>
   );
 }
