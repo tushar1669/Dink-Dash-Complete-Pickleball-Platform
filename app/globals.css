@@ -1,15 +1,101 @@
-/* /app/globals.css (optional safe base) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dd-navy: #0B1220;
+  --dd-navy-deep: #070B14;
+  --dd-ink: #111827;
+  --dd-chartreuse: #D8FF2E;
+  --dd-forest: #0C7C3A;
+  --dd-teal: #0E3B3D;
+  --dd-white: #FFFFFF;
+  --dd-stone: #E5E7EB;
+}
+
 /* Accessibility helper */
 .sr-only { 
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; 
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px;
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0); 
+  white-space: nowrap; 
+  border: 0; 
+}
+
+.not-sr-only {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
 }
 
 /* Senior mode helper */
-.senior * { font-size: 1.05em; line-height: 1.6; }
+.senior * { 
+  font-size: 1.05em; 
+  line-height: 1.6; 
+}
 
-/* Basic page bg/text is set in layout body class */
+/* Hero background utilities */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--dd-navy-deep) 0%, var(--dd-navy) 40%, var(--dd-teal) 100%);
+}
+
+.hero-court-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='0.5' opacity='0.1'%3E%3Crect x='10' y='20' width='80' height='60' rx='4'/%3E%3Cline x1='50' y1='20' x2='50' y2='80'/%3E%3Cline x1='10' y1='50' x2='90' y2='50'/%3E%3Ccircle cx='25' cy='35' r='8' fill='none'/%3E%3Ccircle cx='75' cy='65' r='8' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 120px 120px;
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--dd-chartreuse);
+  color: var(--dd-navy);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #C6ED2A;
+}
+
+.btn-primary:focus {
+  outline: 2px solid var(--dd-chartreuse);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  background-color: var(--dd-navy);
+  color: var(--dd-white);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #0F1A2B;
+}
+
+.btn-secondary:focus {
+  outline: 2px solid var(--dd-navy);
+  outline-offset: 2px;
+}
+
+/* Mobile scrim for hero CTAs */
+.mobile-scrim {
+  background: linear-gradient(to top, rgba(7, 11, 20, 0.8) 0%, rgba(7, 11, 20, 0.4) 50%, transparent 100%);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

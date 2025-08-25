@@ -1,11 +1,10 @@
-// /app/layout.tsx
 import type { Metadata } from 'next';
 import './globals.css';
 import Providers from '@/components/Providers';
 
 export const metadata: Metadata = {
-  title: 'PickleBay — MVP',
-  description: 'Pickleball booking & tournaments (client-only MVP)',
+  title: 'Dink-Dash — Premier Pickleball Platform',
+  description: 'Zero-drama pickleball: book courts instantly, compete transparently, belong. The premier platform for pickleball in India.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
