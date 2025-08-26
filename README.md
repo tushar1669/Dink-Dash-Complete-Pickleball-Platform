@@ -1,4 +1,4 @@
-# PickleBay MVP - Premier Pickleball Platform for India
+# Dink Dash MVP - Premier Pickleball Platform for India
 
 A comprehensive, mobile-first pickleball platform built with Next.js 14, TypeScript, and Tailwind CSS. This MVP focuses on the Delhi NCR market with features for venue booking, tournament participation, equipment shopping, and organizer tools.
 
@@ -264,4 +264,4 @@ This project is for demonstration purposes. Please ensure proper licensing for p
 
 ---
 
-**PickleBay MVP** - Zero-drama pickleball: book instantly, compete transparently, belong. 🏓
+**Dink Dash MVP** - Zero-drama pickleball: book instantly, compete transparently, belong. 🏓
