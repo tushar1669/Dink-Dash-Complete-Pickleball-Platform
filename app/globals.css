@@ -1,15 +1,18 @@
-/* /app/globals.css (optional safe base) */
+/* app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Accessibility helper */
-.sr-only { 
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; 
+/* simple card utility used across pages */
+.card {
+  @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm;
 }
 
-/* Senior mode helper */
-.senior * { font-size: 1.05em; line-height: 1.6; }
-
-/* Basic page bg/text is set in layout body class */
+/* Screen-reader only helper */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
