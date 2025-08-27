@@ -4,9 +4,10 @@ import type { Metadata } from 'next';
 import { LanguageProvider } from '@/lib/i18n';
 import { A11yProvider } from '@/lib/a11y';
 import { Navigation } from '@/components/ui/Navigation';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'PickleBay',
+  title: 'Dink-Dash',
   description: 'Zero-drama pickleball: book instantly, compete transparently, belong.',
   icons: {
     icon: [
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main id="main-content" className="pb-20 md:pb-8 md:pl-64">
               {children}
             </main>
+            <Footer />
           </A11yProvider>
         </LanguageProvider>
       </body>
